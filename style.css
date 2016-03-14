@@ -1,0 +1,1685 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font: 1em Lato, Helvetica, sans-serif;
+     background: hsl(0, 4%, 69%);
+}
+
+
+
+
+.wrapper {
+    max-width: 1277px;/*banner image is 1280?*/
+    margin: 0 auto;
+    background: hsl(203, 7%, 23%);
+}
+
+.galleria{ 
+	width: 100%; 
+	height: 400px;
+ 
+}
+.red {/*for contact form error messages*/
+    color: red;
+    
+}
+/**************************font-family: 'Open Sans Condensed', sans-serif;
+begin .masthead
+**************************************/
+.masthead {
+    display: -webkit-flex;
+	display: -ms-flexbox;
+    display: flex;
+    /*horizontal alignment*/
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background: -webkit-radial-gradient(hsl(0, 0%, 51%) 15%, transparent 16%) 2px 2px;   
+    background: radial-gradient(hsl(0, 0%, 51%) 15%, transparent 16%) 2px 2px;
+    background-color:hsl(0, 0%, 44%);
+    background-size:8px 8px;/*this is the custom gray dot pattern*/
+}
+.masthead .logo {
+/*    border: 4px dotted red;*/
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 180px;
+    -ms-flex: 0 0 180px;
+    flex: 0 0 180px;
+    display: -webkit-flex;
+	display: -ms-flexbox;
+    display:-webkit-box;
+    display:flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end; /*vertical alignment*/
+}
+
+.masthead .logo img {
+    width: 170px;
+    height: 185px;
+/* border: 2px dotted blue;*/
+/*    margin-top: 14em;*/
+
+}
+    .small-logo {
+        display: none;
+    }
+
+.masthead .hdrh1 {
+/*    border: 4px dotted yellow;*/
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: -webkit-flex;
+	display: -ms-flexbox;
+    display:-webkit-box;
+    display:flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;/*vertical alignment*/
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end/*horizontal alignment*/
+    
+}
+
+.hdrh1 h1{
+   font: 3.5em/0.5em 'Pompiere', cursive;
+    letter-spacing: 0.1em;
+    color: hsl(203, 1%, 69%);
+    padding: 0;
+    margin: 8px 10px 0 0;
+   text-align: right;
+
+    
+    }
+.hdrh1 h1 span.artist {
+    color: hsl(21, 65%, 83%);
+    font: 1.2em nothing-you-could-do, cursive;
+}
+
+h2.subhead{
+    font: 2.2em Lato, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    color: hsl(0, 0%, 100%);
+    text-align: right;
+    margin: 1.8em 0.6em 0 0;
+    padding: 0;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.54);/*rgba(0, 0, 0, 0.41);*/
+}
+
+/*************************************
+end masthead
+
+
+begin content
+***********************************.5   vw***/
+.main-area {/*formerly div.content*/
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;  
+    display: -webkit-flex;  
+    display: -ms-flexbox;  
+    display: flex; 
+}
+
+.main-area.make-rows {/* .make-rows added with jquery via thumb click*/
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+        /*puts sidebar below article.main-content-gallery*/
+}
+
+.main-area.make-rows .sidebar{/*for when sidebar is below .main-content-gallery*/
+    /*speaking cross-axis to parent main.main-area*/
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    /*speaking to child .card*/
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    -webkit-justify-content:space-around;
+    -ms-flex-pack:distribute;
+    justify-content:space-around;
+ 
+
+ }
+
+.main-area.make-rows .sidebar .card {
+
+        -webkit-align-self:stretch;
+       -ms-flex-item-align:stretch;
+       align-self:stretch;
+       -webkit-box-flex: 0;
+       -webkit-flex: 0 1 calc(40% - 1em);
+       -ms-flex: 0 1 calc(40% - 1em);
+       flex: 0 1 calc(40% - 1em);
+/*        flex: 0 1 calc(50% - 1em);*/
+/*        flex: 0 1 auto;*/
+    }
+.main-area.make-rows .sidebar.left {
+    -webkit-box-ordinal-group: 3; 
+    -webkit-order: 2; 
+    -ms-flex-order: 2; 
+    order: 2;
+    border-style: none;
+   border-top: 1px solid hsl(0, 0%, 29%);
+}
+.main-area.make-rows .sidebar.right {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+    border-style: none;
+}
+/*below makes illustrator page show wider cards at large viewports*/
+#web-design #pictures .main-area.make-rows .sidebar .card {
+        -webkit-flex: 0 1 calc(70% - 1em);
+       -ms-flex: 0 1 calc(70% - 1em);
+       flex: 0 1 calc(70% - 1em);
+}
+
+
+#story .main-area {
+     background: hsl(60, 82%, 96%);
+}
+
+.masonry { /*main-area .article.*/
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    /*for liquid left column*/
+    padding: 1em;
+    background: hsl(62, 14%, 88%);
+/*    border: 3px dotted blue;*/
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+    
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
+    column-gap: 1em;
+    
+}
+
+#story .masonry {/*testimonials */
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+}
+
+.flash-thumbs {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;  
+	
+	 -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
+    column-gap: 1em;
+	column-width: auto;
+    border-top: 1px solid #b5b5b5;
+    padding: 1em;
+	width: auto;
+    height: auto;
+    background-color: #c9c9c9;
+}
+.flash-thumbs .masonThumb {
+    padding: 0;
+}
+.flash-thumbs .masonThumb p {
+    padding: 1em;
+}
+.flash-thumbs .masonThumb img {
+    width: 100%;
+}
+/****  
+begin testimonials page code
+*****/
+#story .masonry aside.masonThumb {
+    padding: 0;
+    border-radius: 5px; 
+    display:inline-block;
+}
+#story aside.masonThumb header h2 {
+    margin: 0;
+    padding: 0.2em;
+    background-color: hsl(0, 0%, 74%);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    text-align: center;
+    color: white;
+}
+#story aside.masonThumb p {
+    padding: 0.5em 1em 0.5em;
+    margin: 0;
+    font: 0.9em Verdana, Helvetica, sans-serif;
+}
+#story aside.masonThumb p span {
+    color: #aaaaaa;
+}
+#story aside.masonThumb p a {
+    color: hsl(210, 53%, 48%);
+}
+#story aside.masonThumb p a:hover {
+    text-decoration: none;
+}
+
+/*********************
+end testimonials page
+*********************/
+
+.masonry .masonThumb{
+/*    border: 2px dotted red;*/
+    display: inline-block;
+    margin: 0 0 1em;
+    padding: 15px;/*width and padding on same element*/
+    width: 100%;/*width: 280px;*/
+    background: hsl(0, 0%, 100%);
+    box-sizing: border-box;/*fixes box-model blues*/
+    border-radius: 3px;
+    box-shadow:  2px 2px 5px 0px hsl(0, 0%, 63%);
+    /*x, y, blur, distance before blur starts*/
+  
+}
+
+
+.flash-thumbs .masonThumb {
+    display: inline-block;
+    margin: 0 0 1em;
+    padding: 0;/*width and padding on same element*/
+    width: 100%;/*width: 280px;*/
+    background: hsl(0, 0%, 100%);
+    box-sizing: border-box;/*fixes box-model blues*/
+    border-radius: 5px;
+    box-shadow:  2px 2px 5px 0px hsl(0, 0%, 63%);
+    overflow: hidden;
+}
+
+#story .masonry .masonThumb {
+    background-color: hsl(60, 82%, 96%);
+    padding: 0;
+    border-radius: 5px;
+}
+/*
+.masonThumb header h2 {
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+*/
+.masonry .masonThumb .my-thumb img {
+    width: 100%;/*old was 250px - add 30*/
+    border: 1px solid;
+    border-color: #444 #aaa #aaa #444;
+}
+#story .main-content-gallery {
+/*index and teaching and any others that don't have thumbnails*/    
+    padding: 0.5em 1em 1em;
+}
+.main-area .main-content-gallery.testimonial-house {
+    background-color: #e0e0e0;
+   
+}
+
+#pictures .main-area.make-rows .main-content-gallery{
+    /*article.main-content-gallery when switched
+    from .masonry via thumbnail click
+    this is flex-direction: column;
+    this is the one that is too high in ie11 sues machine*/
+/*
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: none; below is hack for ie11
+*/
+    -webkit-box-flex:0;  
+    -webkit-flex:none;  
+    -ms-flex:none;  
+    flex:none;
+/*    flex: 1 1 auto; works in new browsers, not sues machine*/
+    /*width: 100%;*/
+    /*max-width: 949px; because wrapper gets wider than 700h images*/
+    margin: 0 auto;
+	background-color: hsl(203, 7%, 23%);
+    padding: 0.5em 2em 1em;
+/*
+    border: 1px solid hsl(12, 32%, 89%);
+    border: 0 1px 0 1px;
+*/
+}
+#story .notify.home-image img{
+    
+    width: 100%;
+    height: auto; 
+}
+
+#story .notify.home-image {
+    margin: 0.5em 0 0 0;
+/*    border: 1px dotted red;*/
+}
+.home-image p { 
+    margin: 0;
+    padding: 0 0.5em 0;
+}
+
+#story .main-content-gallery h3 {
+    color: hsl(210, 53%, 48%);
+/*    font: 2.5em 'Pompiere', cursive;cantarell*/
+    font: 1.8em cantarell, sans-serif;
+    margin: 0.5em 0 0 0;
+    padding: 0;
+/*    border: 1px dotted rgba(255, 0, 0, 0.08);*/
+}
+#story .main-content-gallery.flash-thumbs h3 {
+    margin: 0.2em 0.4em 0;
+    padding: 0;
+}
+#story .main-content-gallery.flash-thumbs p {
+    margin: 0.2em 1em 0.5em;
+    padding: 0;
+}
+#story .main-content-gallery h3.home-header {
+    margin-top: -60px;
+}
+#story .main-content-gallery p {
+    font: 0.9em Verdana, Helvetica, sans-serif;
+    margin: 0.2em 0 1em 0;
+/*     border: 1px dotted blue;*/
+}
+#story .main-content-gallery p a {
+    color: #0e6695;   
+}
+#story .main-content-gallery p a:hover {
+    color: #0e6695;
+    text-decoration: none;
+}
+
+
+/*begin list bullets code*/
+ #story .main-content-gallery ul,
+#story .card-content ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+#story .main-content-gallery li,
+#story .card-content li { 
+    padding-left: 1em; 
+    text-indent: -.7em;
+    margin-top: 8px;
+    font: 0.9em Verdana, Helvetica, sans-serif; 
+}
+
+#story .main-content-gallery li:before,
+#story .card-content li:before {/*puts a colored bullet before text*/
+    content: "• ";
+    color: hsl(210, 53%, 48%); /* or whatever color you prefer */
+}
+/*end list bullets code*/
+
+
+#story .main-content-gallery li a,
+#story .card-content li a {
+    color: #0e6695;
+    text-decoration: underline;  
+}
+
+#story .main-content-gallery li a:hover,
+#story .card-content li a:hover {
+    color: #0e6695;
+    text-decoration: underline;  
+}
+
+#gallery .main-content-gallery,
+#pictures .main-content-gallery,
+.main-content-gallery.resume-house,
+.main-content-gallery.home-house,
+.main-content-gallery.animation-house,
+.main-content-gallery.testimonial-house{/*article.main-content-gallery when switched from .masonry*/
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+/*    width: 100%; this conflicts & overides flex: auto; */
+    max-width: 1400px; /*because wrapper gets wider than 700h images*/
+    margin: 0 auto;
+    padding: 0 1em;
+/*   border: 3px dotted red;*/
+}
+.main-content-gallery.contact-wrapper {
+    position: relative;
+}
+
+#story .main-content-gallery.animation-house {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+#story .main-content-gallery.animation-house p
+{
+    padding: 0 1em 0;
+}
+#story .main-content-gallery.animation-house h3{
+    margin: 0 0 0 0.4em;
+    
+}
+.sidebar {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 205px;
+    -ms-flex: 0 0 205px;
+    
+    flex: 0 0 205px;/*speakingto parent .mainarea*/
+    background: hsl(201, 2%, 87%);/*(0, 0%, 92%)*/
+/*    border-left: 2px solid hsl(203, 1%, 33%);*/
+/*    padding: 1em;*/
+    margin: 0;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    
+    display: flex;/*speaking to child .card*/
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    
+    flex-direction: column;/*to allow centering cards*/
+    border: 1px solid #a7a7a7
+   /* border: 1px solid hsl(12, 88%, 52%);hsl(12, 45%, 90%);*/
+/*    border: 0 1px 0 1px;*/
+}
+
+.sidebar.video {
+    flex: 0 0 350px;/*speakingto parent .mainarea*/
+/*    background: hsl(0, 0%, 51%);*/
+}
+.sidebar.animation {
+  flex: 0 0 265px;/*speakingto parent .mainarea*/  
+}
+.sidebar.left {
+    
+    border-width: 0 1px 0 0;
+}
+.sidebar.right{
+    border-width: 0 0 0 1px;
+}
+/*
+#web-design #story .main-content-gallery.resume-house {
+    border-right: 1px solid hsl(0, 0%, 43%);
+
+    
+}
+*/
+.sidebar.right.video {
+   border-left: 1px solid hsl(203, 7%, 23%);
+/*    box-shadow:  0px 0px 3px 0px hsl(0, 0%, 39%);*/   
+}
+.card{
+/*because parent is 'flex-direction: column;', 
+    we use the "cross axis" align to center horizontally*/
+/*  width: 190px;*/
+    max-width: 370px;
+    flex: 0 1 auto;/*grow: 0, shrink: yes, height: auto (cross axis)*/
+    padding: 0;
+    background: hsl(60, 82%, 96%);
+    margin: 1em 0.5em 0.5em;
+    border-radius: 5px;
+    box-shadow:  1px 1px 3px 0px hsl(0, 0%, 62%);
+    overflow: hidden
+}
+.rollovers .card img {
+    opacity: 0.9;
+}
+.rollovers .card a:hover img { /* sidebar card hover rollovers*/
+    opacity: 1;
+}
+.rollovers .card a:hover .card-content h3 {
+    color: hsl(210, 53%, 48%);
+}
+
+.rollovers .card a:hover p {
+    color: #000;
+}
+.sidebar.right.video .card.vid-card {
+/*    width: 320px;*/
+    margin: 1em 1em 0.5em;
+}
+
+   .sidebar.right.animation .card.greensockee {
+       background-color: hsla(62, 63%, 93%, 0);
+       padding: 0;
+       margin: 0;
+       box-shadow:  1px 1px 3px 0px hsla(0, 0%, 62%, 0);
+/*       border: 1px dotted red;*/
+   }
+.card-thumb img{
+    width: 100%;
+}
+.card a {
+    color: black;
+    text-decoration: none;
+}
+#web-design #pictures .card a {
+    color: hsl(210, 53%, 48%);
+    text-decoration: underline;
+}
+#web-design #pictures .card a:hover {
+    
+    text-decoration: none;
+}
+.card-content h3 {
+    font: 1.5em cantarell, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: hsl(210, 47%, 68%);
+    text-align: center;
+/*    border: 1px dotted red;*/
+}
+#gallery .card-content h3,
+#pictures .card-content h3 {/*make text darker on gallery asides*/
+    color: hsl(210, 53%, 48%);
+}
+/*
+.main-content-gallery .flash-thumbs .masonThumb ._blank-caption h3 {
+    color: hsl(332, 97%, 47%);
+    margin: 0;
+    padding: 0;
+}
+*/
+
+.card-content,
+.card.vid-card card-content {
+    padding: 0 1em 0.75em;
+}
+
+.card-content p {
+    margin-top: 0.5em;
+    padding: 0;
+    /*letter-spacing: 0.04em;*/
+    font: 0.9em Verdana, Helvetica, sans-serif;
+    color: #a2b4c3;
+}
+#story .animation .card .card-content h3 {
+    color: hsl(210, 53%, 48%);
+}
+#story .animation .card .card-content p {
+    color: hsl(210, 43%, 51%);
+}
+/*for cards that are in the animation sidebar*/
+#story .animation .card.blue a .card-content p {
+    color: #a2b4c3;
+}
+#story .animation .card.blue a:hover .card-content p {
+    color: #000000;
+}
+
+
+#story .animation .card.blue a .card-thumb img {
+    border-bottom: 1px solid #7b7b7b;
+    opacity: 0.8;
+}
+#story .animation .card.blue a:hover .card-thumb img {
+    border-bottom: 1px solid #ff0000;
+    opacity: 1;
+}
+#gallery .card-content p,
+#pictures .card-content p {/*make text darker on gallery asides*/
+    color: #000;
+}
+.card.vid-card .card-content h3 {
+    color: hsl(210, 53%, 48%);
+}
+.card.vid-card .card-content p,
+.card.vid-card .card-content li{
+    color: hsl(0, 0%, 0%);
+}
+
+.card.vid-card .card-content a,
+.animation .card .card-content p a {
+     color: hsl(210, 53%, 48%);
+    text-decoration: underline; 
+}
+
+.card.vid-card .card-content a:hover,
+.animation .card .card-content p a:hover,
+.flash-thumbs .masonThumb ._blank-caption p a:hover{
+    text-decoration: none;
+}
+.flash-thumbs .masonThumb a img,
+.card .card-thumb a img {
+    border-bottom: 1px solid hsl(0, 0%, 80%);
+}
+
+
+/*for a rollover effect on bottom border of 
+thumbs at top of clickable cards with black text*/
+.flash-thumbs .masonThumb a:hover img,
+.card .card-thumb a:hover img {
+    border-bottom: 1px solid hsl(0, 100%, 51%);
+    
+}
+
+.masonry .masonThumb {/*art gallery pages*/
+    position: relative;
+}
+.notify .caption {
+    color: hsl(0, 0%, 100%);
+}
+.masonThumb .caption{
+    color: #6d6d6d;
+    font-size: 0.85em;
+    /*box-sizing: border-box;fixes box model blues*/
+    width: calc(100% - 31px);/*calc(inherit - 15px)*/
+/*    background: hsla(0, 0%, 1%, 0.40);*/
+/*    border: 1px solid hsla(0, 0%, 100%, 0.46);*/
+    /*border: 1px solid red;*/
+    position: absolute;
+    bottom: 0px;
+    left: 15px;
+    /*padding: 0 15px;*/
+/*   height: 18px;*/
+/*    opacity:0;*/
+/*
+    -webkit-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+*/
+    
+}
+/*
+.masonThumb:hover .caption {
+    opacity: 1;
+}*/
+.masonThumb .caption p {
+    margin: 2px;
+    padding: 0;
+}
+
+
+
+.masonThumb .caption .caption-description {
+    display: none;/*hides paragraph on thumbs*/
+}
+
+/*.masonThumb .caption h3 {
+    height: 2em;
+}*/
+.masonThumb .my-image{/*allows jquery hide() work  */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 2px;
+    height: 2px;
+
+/*    display: none;*/
+}
+/*
+.masonThumb:hover .caption {
+    opacity: 1;
+}
+*/
+
+/*.masonThumb .caption p{
+    margin: 3px;
+}*/
+.notify {
+/*    border: 4px dotted red;*/
+    
+    margin: 0 auto 0;
+}
+
+.masonThumb p .caption-title {
+    text-align: center;
+      display: block;
+}
+
+.caption p .caption-title {
+/*    font:  0.85em Verdana, Arial, sans-serif;*/
+/*    color: #fff;*/
+    font:  0.85em 'Open Sans', Verdana, sans-serif;
+    font-weight: 400;
+}
+.caption p .caption-description {
+    letter-spacing: 0.065em;
+    font:  0.85em 'Open Sans', Verdana, sans-serif;
+    font-weight: 400;
+}
+.caption p {
+    margin: 5px 35px 3px 5px;
+ 
+}
+
+
+
+
+
+.notify .caption {
+    width: inherit;
+    border-top: 1px solid hsla(0, 0%, 100%, 0);
+    position: relative;
+    top: -85px;/*top: -56, ht:50*/
+    left: 0px;
+    height: 80px;
+/*
+   -webkit-transition: background 1s ease, border 1s ease;
+    transition: background 1s ease, border 1s ease;
+*/
+    -webkit-transition: all 1.5s ease;
+    transition: all 1.5s ease;
+    background: hsla(0, 0%, 0%, 0);
+    border-color: hsla(0, 0%, 0%, 0);
+    opacity: 1;/*it's visible, but all colors alpha: 0*/
+    color: hsla(0, 0%, 0%, 0);
+    }
+    .notify .caption a {/*link text color in caption hidden state */
+        color: hsla(0, 0%, 0%, 0);
+    }
+   
+/*
+
+ .notify .caption.caption-on,
+    .notify:hover .caption
+	.notify .caption.caption-on,
+    .notify:hover .caption,
+    .notify:focus .caption
+*/
+
+    .notify .caption.caption-on {/*added via hover or jquery click hsla(0, 0%, 1%, 0.50)*/
+           /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.75+0,0.46+63,0+94 */
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.46) 63%, rgba(0,0,0,0) 94%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.46) 63%,rgba(0,0,0,0) 94%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.46) 63%,rgba(0,0,0,0) 94%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+        border-top: 1px solid hsla(0, 0%, 100%, 0.46);
+         color: hsl(0, 0%, 100%);
+        -webkit-transition: all 1.5s ease;
+        transition: all 1.5s ease;
+    }
+
+/*.notify:hover .grid-clicker a.grid-hamburger {
+turns on x sprite (back to grid/thumbs icon) on hover   
+    opacity: 1;
+        -webkit-transition: all 1.5s ease;
+        transition: all 1.5s ease;
+}
+*/
+.notify .caption.caption-on a{
+        color: hsl(0, 0%, 100%);
+}
+
+.notify .grid-clicker a.grid-hamburger:hover {
+    background-color: #f00;
+}
+
+.caption-clicker a.caption-hamburger:hover {
+    background-color: #049f27;
+}
+
+.notify .grid-clicker a.grid-hamburger {
+    width: 30px;
+    height:30px;
+    background-color: hsl(210, 53%, 48%);
+    background-image: url(images-interface/sprite40-160.png);
+    background-repeat: no-repeat;
+    background-position: 0 -60px;/*120 old*/
+    background-size: 30px 150px;
+    margin:0;
+    position: absolute;
+    right: 0;
+    top:0;
+    border: 1px solid hsla(0, 0%, 100%, 0.29);
+
+}
+/****************************************
+begin caption hamburger controls
+**************************************/
+  .notify .caption-clicker a.caption-hamburger {
+        width: 30px;
+        height:30px;
+       background-image: url(images-interface/sprite40-160.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 30px 150px;
+        margin:0;
+        position: absolute;
+        right: 0;
+        bottom:0;
+        border: 1px solid hsl(210, 53%, 48%);
+        -webkit-animation-name: pulse;
+        animation-name: pulse;
+        -webkit-animation-duration: 3s;
+        animation-duration: 3s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
+    }
+    @-webkit-keyframes pulse{
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+        
+    }
+@keyframes pulse{
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+        
+    }
+
+    .notify .caption-clicker a.caption-hamburger.caption-xburger {
+        background-position: 0 -120px;
+    }
+
+    .notify .grid-clicker a.grid-hamburger {
+        opacity: 0;
+        -webkit-transition: all 1.5s ease;
+        transition: all 1.5s ease;
+        /*        opacity: 0;*/
+    }
+   .notify .grid-clicker a.grid-hamburger.showing {
+       /* x sprite comes on via jquery click addClass */
+       opacity: 1;
+            -webkit-transition: all 1.5s ease;
+        transition: all 1.5s ease;
+/*        opacity: 1;*/
+    }
+
+
+
+/***************************
+end hamburger controls
+*******************************************/
+.notify .my-image {/*before animation*/
+    /*display: none;mark-animation old: 1.5s*/
+    opacity: 0;
+       -moz-transition: all 1500ms ease;
+    -webkit-transition: all 1500ms ease;
+         -o-transition: all 1500ms ease;
+            transition: all 1500ms ease;
+       -moz-transform: translate3d(0px, 150px, 0px);
+    -webkit-transform: translate3d(0px, 150px, 0px);
+         -o-transform: translate3d(0px, 150px, 0px);
+            transform: translate3d(0px, 150px, 0px); /*(x, y, z)*/
+	width: 100%;
+/*    border: 3px solid #2b2c2c;*/
+}
+.notify .animate-in {/*gets added at scroll down*/
+    opacity: 1;
+   -moz-transform: translate3d(0px, 0px, 0px);
+-webkit-transform: translate3d(0px, 0px, 0px);
+     -o-transform: translate3d(0px, 0px, 0px);
+        transform: translate3d(0px, 0px, 0px);
+}
+.notify .animate-out {/*added at scroll up*/
+    opacity: 0;
+       -moz-transform: translate3d(0px, 150px, 0px);
+    -webkit-transform: translate3d(0px, 150px, 0px);
+         -o-transform: translate3d(0px, 150px, 0px);
+            transform: translate3d(0px, 150px, 0px); /*(x, y, z)*/
+}
+figure.notify {/*figure.notify img*/
+    max-width: 932px;/*this is max full size in h700 folder*/
+}
+
+figure.portrait.notify {
+    max-width: 470px;/*max-width: 490px;/*this is max full size in h700 folder*/
+}
+
+/*********************************************
+begin resume 
+*************************************************/
+h1.fn {/*full name*/
+    color: hsl(210, 65%, 35%);
+    font: bold 2.5em cantarell, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h2.role {
+    font: 2.2em 'Open Sans Condensed', sans-serif;
+    color: hsl(0, 0%, 58%);   
+    margin: 0;
+    padding: 0;
+}
+#story .main-content-gallery.resume-house section h3 {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid hsl(207, 11%, 81%);
+    line-height: 1.3em;
+/*    border: 1px dotted red;*/
+}
+#story .main-content-gallery.resume-house section ul,
+header.vcard ul{
+    margin: 0 0 0.5em;
+    padding: 0;
+}
+.resume-house header.vcard {
+     margin: 0 0 0.5em;
+    
+}
+.resume-house section {
+    
+    margin-bottom: 1em;
+}
+.resume-house h1 {
+    font: 700 1.7em 'Open Sans Condensed', sans-serif;
+    margin: 0.2em 0;
+    padding: 0;
+    color: hsl(210, 53%, 48%);
+}
+
+/*
+.job-wrapper:nth-of-type(odd) {
+
+}
+*/
+.two {
+    margin: 2.5em 0 0;
+    padding: 0.2em;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+/*   border-bottom: 1px dotted hsl(0, 0%, 83%);210, 25%, 91%*/
+    flex-wrap: wrap;
+
+    background-color: hsl(0, 0%, 97%);
+     border-radius: 5px;
+    box-shadow:  1px 1px 3px 0px hsl(0, 0%, 62%);
+
+}
+.resume-house section h4 {
+    color: hsl(0, 0%, 49%);
+    margin: 0;
+    padding: 0;
+    font: 1.8em 'Open Sans Condensed', sans-serif;
+}
+.resume-house section h4.job {
+    color: hsl(210, 53%, 48%);
+}
+.resume-house section h5 {
+    margin: 0.3em 0 0;
+    padding: 0;
+    font:  1.8em 'Open Sans Condensed', sans-serif;
+    color: hsl(210, 53%, 48%);
+}
+
+/**************************************************
+end resume 
+******************************************************/
+
+/*responsive video (or target=_blank external big thumbs)below*/
+.main-content-gallery.video-house {
+    background: hsl(0, 0%, 82%);
+}
+
+._blank-big-thumbs {
+    margin: 0 auto 1em;
+    padding: 1em;
+    width: 100%;
+    background: hsl(60, 82%, 96%);
+    border-radius: 5px;
+    box-shadow:  1px 1px 3px 0px hsl(0, 0%, 62%);
+    
+}
+
+.video-container {
+    margin: 0 auto 1em;
+    padding: 1em 0;
+    width: 100%;
+    background: hsl(60, 82%, 96%);
+    border-radius: 5px;
+    box-shadow:  1px 1px 3px 0px hsl(0, 0%, 62%);
+}
+
+.card.vid-card.sherwood {
+    margin: 0;
+}
+/*
+.card.vid-card .video-container {
+
+
+    border-radius: 0;
+    border: 1px dotted red;
+    padding: 0;
+
+    box-shadow:  0px 0px 0px 0px hsl(0, 0%, 62%);
+}
+*/
+.card.vid-card .video-container .responsive-container {
+/*    border: 1px dotted blue;*/
+    
+/*    width: 100%;*/
+}
+.responsive-container {
+    position: relative;
+    margin: 0.2em 1em 1em 1em;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+/*    margin-bottom: 1em;*/
+/*    border: 1px dotted red;*/
+    
+}
+
+.responsive-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-caption {
+    width: 85%;
+/*    border: 1px dotted blue;*/
+    margin: -10px auto 0;
+    padding: 0;
+     font: 0.9em Verdana, Helvetica, sans-serif;
+}
+.card.vid-card.sherwood {
+    margin: 0;
+}
+.card.vid-card .video-container {
+
+/*    margin: 0.2em 1em 1em 1em;*/
+    
+/*    border: 1px dotted red;*/
+    padding: 0;
+/*    margin: 0 -1em 0 -1em;*/
+    box-shadow:  0px 0px 0px 0px hsl(0, 0%, 62%);
+}
+.card.vid-card.sherwood .video-container,
+.card.vid-card.sherwood .video-container .responsive-container
+{
+    margin: 0;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+   
+   
+}
+.card.vid-card.sherwood {
+    padding: 0;
+}
+.video-caption a {
+     color: hsl(210, 53%, 48%);
+    text-decoration: underline; 
+}
+
+.video-caption a:hover {
+    text-decoration: none;
+}
+/***********************
+end video
+begin animation
+************************/
+#bannerV {
+    margin: 1em auto 1em;
+}
+p.black {
+    color: #000;
+}
+
+/***********************************
+end content
+
+begin footer
+***********************************/
+.footer-area {
+    background: hsl(203, 7%, 23%);
+    padding: 1em;  
+    color: hsl(210, 53%, 48%);
+
+/*    flex-direction: column;*/
+}
+
+
+.footer-area  a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    font-size: 0.8em;
+    margin: 0 0.3em 0;
+    padding: 0;
+}
+
+.footer-area  a:hover{
+    text-decoration: underline;
+}
+.footer-area p {
+    text-align: center;
+    padding: 0;
+    margin: 0.5em 0 0 0;
+	line-height: 1.8em;
+}
+/*()()()()()()()()()()****************************
+begin media queries
+**************************************************/
+/************************************************
+
+
+
+
+
+
+
+
+
+***********************************************
+***************************************************
+*************************************************
+begin media queries
+ 
+*************************************************
+*************************************************/
+@media only screen and (min-width: 1024px){/*applies above 1024px viewport*/
+    figure.notify {/*figure.notify img*/
+        max-width: 1380px;/*this is max full size in h1080 folder*/
+    }
+
+    figure.portrait.notify {
+        max-width: 674px;/*max-width: 800px;/*this is max full size in h1080 folder*/
+    }
+}
+
+
+@media only screen and (min-width: 841px) and (max-width: 1053px){
+    .masonry {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+    } 
+    .video-house.flash-thumbs,
+    .animation-house div.flash-thumbs {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;  
+    }
+    
+    
+    #web-design #story .notify.home-image .caption {
+        height: 105px;
+        top: -110px;
+    }
+}
+@media only screen and (min-width: 781px) and (max-width: 840px){
+    .masonry {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    } 
+    
+    .video-house.flash-thumbs,
+    .animation-house div.flash-thumbs,
+    #story .main-area .masonry.testimonials{
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;        
+    }    
+    
+    #web-design #story .notify.home-image .caption {
+        height: 125px;
+        top: -120px;
+    }
+    
+    #home #story .notify.home-image .caption {
+        height: 80px;
+        top: -85px;
+    }
+    
+    
+}
+
+
+
+@media screen and (max-width: 780px){
+    /*apply up to 765 !!!!!!!!!main smartphone styles!!!!!!!!!!!!!!!!!*/
+	.footer-area p,
+	.footer-area a {
+		font-size: 1.1em;
+	}
+    #banner{
+        display: none;
+    }
+    .masonry {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+    } 
+    
+    .video-house.flash-thumbs,
+    .animation-house div.flash-thumbs {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;        
+    }
+
+    nav.main-menu { /*<nav class="main-menu">*/
+        position: absolute;
+        top:174px;
+        right: 0;
+        padding: 0;
+        display: none;
+       /*z-index: 100001;only needed for galleria*/
+
+    }
+    .main-menu ul {
+       -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;/*should this change to display: block?*/
+	   width: 10.5em;/*width: 8.5em;*/
+    }
+    .main-menu li a {
+        font-size: 0.85em;
+/*        padding: 0.8em;*/
+    }
+  
+    .main-menu ul li.levelone {
+        border-top: 1px solid hsl(0, 0%, 0%);
+    }
+    .main-menu ul ul {
+    position: absolute;
+    top: 0;/*old was bottom*/    
+    right: 10.45em;/*right: 8.45em; line 733, right is .05 less than ul width */
+    border-bottom: 1px solid hsl(0, 27%, 3%);
+    display: none;
+    }
+    
+/*
+    
+    .main-menu li.dropmenu.web-design ul {
+    position: absolute;
+    top: 0;    
+    right: 10.45em;
+    
+    }
+    
+      .main-menu li.dropmenu.web-design:hover ul.leveltwo {
+    display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }  
+*/
+    .main-menu li.dropmenu:hover ul.leveltwo {
+    display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .main-menu ul ul li { 
+        /*top borders on mobile flyouts*/
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        border: 1px solid hsl(0, 0%, 60%); 
+        border-width: 1px 0 0 0;
+    }
+    .main-menu ul li.web-design ul li{/*zeros out cross axis "height" on mobile */
+
+       -webkit-box-flex: 1;
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;  
+
+    }
+    .main-menu ul ul li:hover{
+        border-width: 1px 0 0 0;
+    }
+    
+    .main-menu li a span.big {
+        display: none;
+       
+    }    
+    .main-menu li a span.small {
+        display: inline-block;
+         
+    }     
+
+    .bannerimage {
+        height: 60px;
+        border-bottom: 12px solid hsl(203, 0%, 29%);
+    }
+
+        h2.subhead{
+        font: 1.8em Lato, Helvetica, sans-serif;
+        margin: 0.8em 0.2em 0 0
+    } 
+
+    .masthead .logo {
+       
+        -webkit-box-flex: 0;  
+        -webkit-flex: 0 0 105px;  
+        -ms-flex: 0 0 105px;  
+        flex: 0 0 105px;
+    }
+    .big-logo {
+        display: none;
+    }
+    .small-logo {
+        display: block;
+    }
+    .masthead .logo img {
+        margin: 5px;
+        width: 98px;
+        height: 107px;
+/*        border: 2px dotted blue;*/
+    }
+    
+      .hdrh1 h1{
+/*        font-size: 2em;*/
+          font: 2em/0.9em 'Pompiere', cursive;
+    }
+/*
+    .hdrh1 h1 span.hide-howard {
+        font: 2em/0.9em 'Pompiere', cursive;
+    }
+*/
+
+    .hdrh1 h1 span.artist {
+        font-size: 1.5em;
+    }
+
+    #nav-phone {
+/*        position: absolute;*/
+        display: block;
+/*        top: 0;*/
+        width: 100%;
+        height: 56px;
+        padding: 0;
+        margin: 0;
+        background: hsl(203, 7%, 23%);
+    }
+     #nav-phone h4 {
+        position:absolute;
+        top: 130px;
+        right: 46px;
+        margin: 0;
+        padding: 0;
+        color: hsl(0, 0%, 100%);/*hsl(210, 53%, 48%)*/
+        font: 1.5em cantarell,sans-serif;
+        
+    }
+    
+    #nav-phone a {
+        width: 40px;
+        height:40px;
+       background-image: url(images-interface/sprite40-160.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        margin:0;
+        padding: 0;
+        position: absolute;
+        right: 3px;
+        top: 125px;
+/*        border: 1px solid hsla(0, 0%, 100%, 0.29);*/
+    }
+    
+    #nav-phone a.hamburger {
+        background-position: 0 0;
+        transition: background-position 0.3s cubic-bezier(.05, .89, .33, .95);
+    }
+
+
+    /*#nav-phone a.hamburger:hover {
+        background-position: 0 -39px;
+    }*/
+
+
+    #nav-phone a.xburger {
+        background-position: 0 -80px;
+    }
+
+  /*  #nav-phone a.xburger:hover {
+        background-position: 0 -120px;
+    }*/
+/********************
+   end navPhone section media queries still!
+***********************/
+
+
+
+    
+   .caption p {
+        font-size: 0.8em;
+/*       color: hsl(358, 100%, 52%);*/
+    }
+
+     
+    .main-area {
+/*        display: block; puts 3 horizontal
+        columns to 3 rows with aside.sidebar
+        re-ordered to be at bottom*/
+ 
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        /*puts sidebar below article.main-content-gallery*/
+    }
+    
+    .main-area .masonry,
+    .main-area .main-content-gallery.animation-house,
+    .main-area .main-content-gallery.video-house.flash-thumbs,
+	.main-area .home-house
+    {
+        /*tells thumbnail area how high to be when 
+        parent .main-area is in flex-direction column*/
+
+        -webkit-box-flex: 0; 
+        -webkit-flex: none; 
+        -ms-flex: none; 
+        flex: none;      
+       /* $$$$$$$$$$$$$$$$$$$$$ this is wrong!!!
+        
+        hack for ie 11.0.9600
+        
+        $$$$$$$$$$$$$$$$$$$$$$$$*/
+
+    }
+    .sidebar.right.video,
+    .sidebar.right.animation,
+    .sidebar{
+       /*speaking cross-axis to parent main.main-area*/
+      -webkit-box-flex: 1;  
+        -webkit-flex: 1 1 auto; 
+        -ms-flex: 1 1 auto;  
+        flex: 1 1 auto;
+/*
+        display: -webkit-flex;
+	    display: -ms-flexbox;
+*/
+        /*speaking to child .card*/
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content:space-around;
+        -ms-flex-pack:distribute;
+        justify-content:space-around;
+/*        align-items: flex-start;*/
+
+    }
+    .sidebar.right.video.printing {
+        background-color: #d81064;
+    }
+    .sidebar.left {
+        /*this is replicated on line 177 for the thumbnail click 
+        instead of media query activation*/
+        -webkit-box-ordinal-group: 3; 
+        -webkit-order: 2; 
+        -ms-flex-order: 2; 
+        order: 2;
+        border-style: none;
+       border-top: 1px solid hsl(0, 0%, 29%);
+    }
+    .sidebar.right {
+        -webkit-box-ordinal-group: 4;
+        -webkit-order: 3;
+        -ms-flex-order: 3;
+        order: 3;
+        border-style: none;
+    }
+    .sidebar.right.animation{
+        -webkit-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+    }
+    .main-content-gallery.resume-house,
+   .main-content-gallery.animation-house
+    {
+	     -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+    #gallery .sidebar.right {
+         border-top: 1px solid hsl(210, 100%, 100%);
+    }
+    #pictures .sidebar.right {
+         border-top: 1px solid hsl(210, 100%, 100%);
+    }
+    
+   .sidebar .card {
+       /*
+       This happens while thumb are visible, but sidebars have wrapped below
+       makes it resume full size cross axis height*/
+        -webkit-align-self:stretch;
+       -ms-flex-item-align:stretch;
+       align-self:stretch;
+       -webkit-box-flex: 0;
+       -webkit-flex: 0 1 calc(40% - 1em);
+       -ms-flex: 0 1 calc(40% - 1em);
+       flex: 0 1 calc(40% - 1em);
+/*        flex: 0 1 calc(50% - 1em);*/
+/*        flex: 0 1 auto;*/
+    }
+    
+
+
+
+    .main-area.make-rows .sidebar .card {
+        /*This activates when they click a thumb and sidebars wrap via the jqery addClass(make-rows) */
+        -webkit-box-flex: 0; 
+        -webkit-flex: 0 1 calc(40% - 1em); 
+        -ms-flex: 0 1 calc(40% - 1em); 
+        flex: 0 1 calc(40% - 1em);
+        
+    }
+    .wrapper {
+        background: hsla(62, 14%, 88%);/*hack for ie-11*/
+    }
+}
+/***************************
+end main 7xx media query
+
+*************************/
+
+@media screen and (max-width: 680px){/*apply up to, this is in NOT .make-rows mode*/
+     .sidebar .card{
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 1 80%;
+        -ms-flex: 0 1 80%;
+        flex: 0 1 80%;
+    }   
+    
+} 
+    
+@media screen and (max-width: 600px){ /*apply up to --*/
+
+    .masonry {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    }
+    
+    #story .masonry,
+    #story .flash-thumbs{/*testimonials*/
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+}
+    
+    #web-design #story .notify.home-image .caption {
+        height: 120px;
+        top: -125px;
+    }
+    .main-area.make-rows .sidebar .card {
+        /*make cards wider on ipads*/
+        -webkit-box-flex: 0; 
+        -webkit-flex: 0 1 70%; 
+        -ms-flex: 0 1 70%; 
+        flex: 0 1 70%;
+        
+    }
+
+}    
+
+@media screen and (max-width: 449px){/*apply up to --*/
+ 
+    .sidebar{
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .sidebar .card{
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 1 80%;
+        -ms-flex: 0 1 80%;
+        flex: 0 1 80%;
+    }
+    .hdrh1 h1 span.hide-howard {
+       display: none;
+/*        border: 1px dotted red;*/
+    }
+    #web-design #pictures .notify .caption {
+        height: 108px;
+        top: -113px; 
+    }
+    
+}
